@@ -32,6 +32,16 @@ li {
   border-radius: 0.5rem;
   margin: 12px;
 }
+li:hover {
+  background-color: rgb(237, 237, 237);
+}
 input {
   margin: 0 0.85rem;
+}
+.crossButton {
+  background-color: rgb(173, 35, 63);
+  border: none;
+  color: white;
+  margin: 0.5rem;
+  border-radius: 3px;
 }

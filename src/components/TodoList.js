@@ -5,8 +5,8 @@ import PropTypes from "prop-types";
 function TodoList(props) {
   return (
     <ul>
-      {props.todos.map((todo, index) => {
-        return <TodoItem todo={todo} key={todo.id} index={index} />;
+      {props.todos.map((todo) => {
+        return <TodoItem todo={todo} key={todo.id} onChange={props.onToggle} />;
       })}
     </ul>
   );
@@ -14,6 +14,7 @@ function TodoList(props) {
 
 TodoList.propTypes = {
   todos: PropTypes.arrayOf(PropTypes.object).isRequired,
+  onToggle: PropTypes.func.isRequired,
 };
 
 export default TodoList;

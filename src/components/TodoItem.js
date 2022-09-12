@@ -1,20 +1,23 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function TodoItem({ todo, index }) {
+function TodoItem({ todo, onChange }) {
+  console.log(todo);
   return (
     <li>
-      <input type="checkbox" />
-      {index + 1 + " "}
-      {todo.title}
-      <button>&times;</button>
+      <span>
+        <input type="checkbox" onChange={() => onChange(todo.id)} />
+        {todo.title}
+      </span>
+
+      <button className="crossButton">&times;</button>
     </li>
   );
 }
 
 TodoItem.propeTypes = {
   todo: PropTypes.object.isRequired,
-  index: PropTypes.number,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default TodoItem;
