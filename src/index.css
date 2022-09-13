@@ -39,9 +39,15 @@ input {
   margin: 0 0.85rem;
 }
 .crossButton {
-  background-color: rgb(173, 35, 63);
+  background-color: rgb(48, 46, 46);
   border: none;
   color: white;
   margin: 0.5rem;
   border-radius: 3px;
+}
+.crossButton:hover {
+  background-color: rgb(173, 35, 63);
+}
+.done {
+  text-decoration: line-through;
 }
